@@ -11,7 +11,7 @@
 <script src="https://vk.com/js/api/openapi.js?136" type="text/javascript"></script>
 <script type="text/javascript">
     VK.init({
-        apiId: 5709426
+        apiId: 5746040
     });
     VK.Auth.login(function (response) {
         if (response.session) {
@@ -39,8 +39,6 @@
     <p id="lname"></p>
 
     <img id="vk_avatar" />
-
-    
     <div id="wall_text"></div>
 
     <script type="text/javascript">
@@ -64,7 +62,7 @@
         $("#get_photo").click(function () {
             VK.api("wall.get", { owner_id: vk_user_id, count: 1 }, function (data) {
                 console.log(data);
-                $("#wall_text").html(data.response[1].text);
+                $("#wall_text").html(data.responce[1].text);
             });
         });
     </script>

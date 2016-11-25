@@ -39,8 +39,6 @@
     <p id="lname"></p>
 
     <img id="vk_avatar" />
-
-    
     <div id="wall_text"></div>
 
     <script type="text/javascript">
@@ -64,7 +62,7 @@
         $("#get_photo").click(function () {
             VK.api("wall.get", { owner_id: vk_user_id, count: 1 }, function (data) {
                 console.log(data);
-                $("#wall_text").html(data.response[1].text);
+                $("#wall_text").html(data.responce[1].text);
             });
         });
     </script>
